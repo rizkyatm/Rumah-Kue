@@ -46,7 +46,7 @@
             <p>Tart Cake</p>
         </div>
         <div class="content">
-        <a href="tambahtart.html"><button class="btn">Tambah</button></a>
+        <a style="width: fit-content;" href="tambahtart.html"><button class="btn">Tambah</button></a>
         <div class="table_konten">
             <table>
                 <thead>
