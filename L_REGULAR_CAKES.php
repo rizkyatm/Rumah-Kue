@@ -15,28 +15,34 @@
     <link rel="stylesheet" href="stylelanding.css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <title>Hello, world!</title>
   </head>
   <body>
-    <!-- slider and navbar start -->
+   <!-- hero and navbar start -->
+   <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel" >
+      <div class="carousel-inner">
+        <div class="carousel-item active">
           <div id="manu" style="position:absolute;">
-            <nav>
+            <nav class="navbar">
                 <h1>Rumah Kue</h1>
-                <ul style="position: relative; top: -65px ;">
+                <ul style="position: relative;">
                     <li><a href="landing.html">Home</a></li>
                     <li><a href="#">Gallery</a></li>
                     <li><a href="#">About</a></li>
                 </ul>
             </nav>
         </div>
-          <img src="./img/pexels-carsten-vollrath-11543451.jpg" class="d-block w-100" alt="..." style="height:100vh" >
+          <img src="./img/pexels-acharaporn-kamornboonyarush-1028714.jpg" class="d-block w-100" alt="..." style="height:100vh" >
           <div class="carousel-caption d-none d-md-block"style="position: absolute; top: 600px;">
             <h5 >Featured Menu</h5>
             <p>The best from our kitchen</p>
           </div>
-        
-    <!-- HERO and navbar end -->
+        </div>
+      </div>
+    </div>
+    <!-- hero and navbar end -->
     <!-- isi content start -->
    <div style="display: flex; text-align: center; justify-content: space-evenly; margin: 50px auto;" >
     <div style="border: 1px none black; width: 40%;"><hr style="border:black solid;"></div>
