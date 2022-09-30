@@ -1,7 +1,7 @@
 <?php 
 include "koneksi.php";
 $id_kue = $_GET['id_kue'];
-$sql = "SELECT * FROM regular_cake WHERE id_kue='$id_kue'";
+$sql = "SELECT * FROM mousse_cake WHERE id_kue='$id_kue'";
 $query = mysqli_query($koneksi, $sql);
 $pel = mysqli_fetch_array($query);
 ?>
@@ -13,7 +13,7 @@ $pel = mysqli_fetch_array($query);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tambah Data Kue</title>
-    <link rel="stylesheet" href="tambahdatakue.css">
+    <link rel="stylesheet" href="styleformedit_regular.css">
 
     <!-- icone -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -48,9 +48,9 @@ $pel = mysqli_fetch_array($query);
 
         <div class="list_menu">
             <ul>
-                <li><iconify-icon icon="ic:baseline-cake" style="color: white; margin-left: 40px;" width="20" height="20">h</iconify-icon><a href="table_regular">REGULAR CAKE</a></li>
-                <li><iconify-icon icon="cib:cakephp" style="color: #ffff; margin-left: 40px;" width="20" height="20"></iconify-icon><a href="table_mousse">MOUSSE CAKE</a></li>
-                <li><iconify-icon icon="wpf:wedding-cake" style="color: white; margin-left: 40px;" width="20" height="20"></iconify-icon><a href="table_tart">TART</a></li>
+                <li><iconify-icon icon="ic:baseline-cake" style="color: white; margin-left: 40px;" width="20" height="20">h</iconify-icon><a href="table_regular.php">REGULAR CAKE</a></li>
+                <li><iconify-icon icon="cib:cakephp" style="color: #ffff; margin-left: 40px;" width="20" height="20"></iconify-icon><a href="table_mousse.php">MOUSSE CAKE</a></li>
+                <li><iconify-icon icon="wpf:wedding-cake" style="color: white; margin-left: 40px;" width="20" height="20"></iconify-icon><a href="table_tart.php">TART</a></li>
             </ul>
         </div>
     </div>
@@ -60,7 +60,7 @@ $pel = mysqli_fetch_array($query);
     </div>
     <!-- ini konten kanan -->
     <div class="kotak-kanan">
-        <form enctype="multipart/form-data" action="edit.php" method="post">
+        <form enctype="multipart/form-data" action="edit_mousse.php" method="post">
         <table>
             <tr>
                 <td><input value="<?php echo $pel['id_kue'] ?>" class="input" type="hidden" name="id_kue" required="required"></td>
@@ -86,9 +86,6 @@ $pel = mysqli_fetch_array($query);
             <tr>
                 <td><input autocomplete="off" value="<?php echo $pel['detail_kue'] ?>" class="input" type="text" name="detail_kue" required="required"></td>
             </tr>
-            
-  
-
         </table>
         <input type="submit" name="editt" value="edit" class="btn-simpan">
         </form>

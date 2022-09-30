@@ -41,8 +41,11 @@
     </div>
     <!-- CONTENT-TABLE -->
 
-    <div class="content">
-        <h2>Tart Cake</h2>
+    <div class="judul-content">
+        <div class="judul">
+            <p>Tart Cake</p>
+        </div>
+        <div class="content">
         <a href="tambahdatakue.html"><button class="btn">Tambah</button></a>
         <div class="table_konten">
             <table>
@@ -79,6 +82,7 @@
                 ?>
             <table>
         <div>
+    </div>
     
 </body>
 </html>

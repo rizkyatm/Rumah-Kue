@@ -9,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- link css -->
-  <link rel="stylesheet" href="stylemousse.css">
+    <link rel="stylesheet" href="style.css">
 
 <!-- link fontawesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -41,8 +41,11 @@
     </div>
     <!-- CONTENT-TABLE -->
 
+    <div class="judul-content">
+        <div class="judul">
+            <p>Mousse Cake</p>
+        </div>
     <div class="content">
-        <h2>Mousse Cake</h2>
         <a href="tambahmousse.html"><button class="btn">Tambah</button></a>
         <div class="table_konten">
             <table>
@@ -60,18 +63,18 @@
                     $sql = "SELECT * from mousse_cake";
                     $query = mysqli_query($koneksi, $sql);
 
-                    while ($regular = mysqli_fetch_array($query)) {
+                    while ($mousse = mysqli_fetch_array($query)) {
                     echo"
                     <tbody>
                         <tr>
-                            <td>$regular[id_kue]</td>
-                            <td>$regular[nama_kue]</td>
-                            <td class='img'><img class='gambar' src='foto/$regular[2]'></td>
-                            <td>$regular[harga_kue]</td>
-                            <td class='detail'>$regular[detail_kue]</td>
+                            <td>$mousse[id_kue]</td>
+                            <td>$mousse[nama_kue]</td>
+                            <td class='img'><img class='gambar' src='foto/$mousse[2]'></td>
+                            <td>$mousse[harga_kue]</td>
+                            <td class='detail'>$mousse[detail_kue]</td>
                             <td>
-                                <a href='form_editrmousse.php?id_kue=".$regular['id_kue']."'><button class='btn-edit'><i class='fa-solid fa-pen-to-square fa'></i></button></a>
-                                <a href='hapus_mousse.php?id_kue=".$regular['id_kue']."' onClick=\"return confirm('Yakin akan menghapus data?');\"><button class='btn-hapus'><i class='fa-sharp fa-solid fa-trash'></button></i></a>
+                                <a href='formedit_mousse.php?id_kue=".$mousse['id_kue']."'><button class='btn-edit'><i class='fa-solid fa-pen-to-square fa'></i></button></a>
+                                <a href='hapus_mousse.php?id_kue=".$mousse['id_kue']."' onClick=\"return confirm('Yakin akan menghapus data?');\"><button class='btn-hapus'><i class='fa-sharp fa-solid fa-trash'></button></i></a>
                             </td>
                         <tr>
                     <tbody>";
@@ -79,6 +82,7 @@
                 ?>
             <table>
         <div>
+    </div>
     
 </body>
 </html>

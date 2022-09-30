@@ -24,6 +24,10 @@ body{
     flex-direction: column;
     position: sticky;
   }
+
+.sidebar h2 {
+    color: white;
+}
   
   .dashboard{
     display: flex;
@@ -39,11 +43,16 @@ body{
     padding-right: 20px;
   }
   
-  .dashboard h2{
-    font-size: 15px;
-    font-weight: bold;
-    color: white;
-    margin-left: 5%;
+.judul-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.judul p{
+    font-size: 30px;
+    font-weight: 500;
+    padding-top: 25px;
+    padding-left: 4%;
   }
   
   .list_menu ul li i{
@@ -88,6 +97,7 @@ body{
 
 /* button tambah */
 .btn{
+    margin-left: 17.5%;
     position: relative;
     margin-bottom: 30px;
     border-radius: 5px;
