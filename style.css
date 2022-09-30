@@ -97,7 +97,6 @@ body{
 
 /* button tambah */
 .btn{
-    margin-left: 17.5%;
     position: relative;
     margin-bottom: 30px;
     border-radius: 5px;
@@ -159,6 +158,10 @@ body{
     background-color: red;
     border: none;
     cursor: pointer;
+}
+
+i{
+    color: white;
 }
 
 .detail{

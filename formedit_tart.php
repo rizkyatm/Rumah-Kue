@@ -1,3 +1,11 @@
+<?php 
+include "koneksi.php";
+$id_kue = $_GET['id_kue'];
+$sql = "SELECT * FROM tart WHERE id_kue='$id_kue'";
+$query = mysqli_query($koneksi, $sql);
+$tart = mysqli_fetch_array($query);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +13,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tambah Data Kue</title>
-    <link rel="stylesheet" href="styletambahdatakue.css">
+    <link rel="stylesheet" href="styleformedit_regular.css">
 
     <!-- icone -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -48,47 +56,40 @@
     </div>
 
     <div class="judul">
-        <p>TAMBAH DATA</p>
+        <p>EDIT DATA</p>
     </div>
     <!-- ini konten kanan -->
     <div class="kotak-kanan">
-        <form enctype="multipart/form-data" action="simpantabletart.php" method="post">
+        <form enctype="multipart/form-data" action="edit_tart.php" method="post">
         <table>
             <tr>
-                <td><input class="input" type="hidden" name="id_kue" required="required"></td>
+                <td><input value="<?php echo $tart['id_kue'] ?>" class="input" type="hidden" name="id_kue" required="required"></td>
             </tr>
 
             <tr>
             <td><Label>Nama Kue</Label></td>
             </tr>
             <tr>
-                <td><input class="input" type="text" name="nama_kue" required="required"></td>
+                <td><input autocomplete="off" value="<?php echo $tart['nama_kue'] ?>" class="input" type="text" name="nama_kue" required="required"></td>
             </tr>
 
             <tr>
             <td><label>Harga Kue</label></td>
             </tr>
             <tr>
-                <td><input class="input" type="text, number" name="harga_kue" required="required"></td>
+                <td><input autocomplete="off" value="<?php echo $tart['harga_kue'] ?>" class="input" type="text, number" name="harga_kue" required="required"></td>
             </tr>
 
             <tr>
             <td><label>Detail Kue</label></td>
             </tr>
             <tr>
-                <td><input class="input" type="text" name="detail_kue" required="required"></td>
+                <td><input autocomplete="off" value="<?php echo $tart['detail_kue'] ?>" class="input" type="text" name="detail_kue" required="required"></td>
             </tr>
             
-            <tr>
-            <td><label>Foto Kue</label></td>
-            </tr>
-            <tr>
-                <td><input type="file" name="foto_kue" required="required"></td>
-            </tr>
         </table>
-        <input type="submit" name="simpan" value="Simpan" class="btn-simpan">
+        <input type="submit" name="editt" value="Edit" class="btn-simpan">
         </form>
     </div>
 </body>
 </html>
-

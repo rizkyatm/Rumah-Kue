@@ -46,7 +46,7 @@
             <p>Tart Cake</p>
         </div>
         <div class="content">
-        <a href="tambahdatakue.html"><button class="btn">Tambah</button></a>
+        <a href="tambahtart.html"><button class="btn">Tambah</button></a>
         <div class="table_konten">
             <table>
                 <thead>
@@ -63,18 +63,18 @@
                     $sql = "SELECT * from tart";
                     $query = mysqli_query($koneksi, $sql);
 
-                    while ($regular = mysqli_fetch_array($query)) {
+                    while ($tart = mysqli_fetch_array($query)) {
                     echo"
                     <tbody>
                         <tr>
-                            <td>$regular[id_kue]</td>
-                            <td>$regular[nama_kue]</td>
-                            <td class='img'><img class='gambar' src='foto/$regular[2]'></td>
-                            <td>$regular[harga_kue]</td>
-                            <td class='detail'>$regular[detail_kue]</td>
+                            <td>$tart[id_kue]</td>
+                            <td>$tart[nama_kue]</td>
+                            <td class='img'><img class='gambar' src='foto/$tart[2]'></td>
+                            <td>$tart[harga_kue]</td>
+                            <td class='detail'>$tart[detail_kue]</td>
                             <td>
-                                <a href='formedit_tart.php?id_kue=".$regular['id_kue']."'><button class='btn-edit'><i class='fa-solid fa-pen-to-square fa'></i></button></a>
-                                <a href='hapus_tart.php?id_kue=".$regular['id_kue']."' onClick=\"return confirm('Yakin akan menghapus data?');\"><button class='btn-hapus'><i class='fa-sharp fa-solid fa-trash'></button></i></a>
+                                <a href='formedit_tart.php?id_kue=".$tart['id_kue']."'><button class='btn-edit'><i class='fa-solid fa-pen-to-square fa'></i></button></a>
+                                <a href='hapus_tart.php?id_kue=".$tart['id_kue']."' onClick=\"return confirm('Yakin akan menghapus data?');\"><button class='btn-hapus'><i class='fa-sharp fa-solid fa-trash'></button></i></a>
                             </td>
                         <tr>
                     <tbody>";
