@@ -1,3 +1,11 @@
+<?php 
+include "koneksi.php";
+$id_kue = $_GET['id_kue'];
+$sql = "SELECT * FROM regular_cake WHERE id_kue='$id_kue'";
+$query = mysqli_query($koneksi, $sql);
+$pel = mysqli_fetch_array($query);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -48,45 +56,41 @@
     </div>
 
     <div class="judul">
-        <p>TAMBAH DATA</p>
+        <p>EDIT DATA</p>
     </div>
     <!-- ini konten kanan -->
     <div class="kotak-kanan">
-        <form enctype="multipart/form-data" action="simpan.php" method="post">
+        <form enctype="multipart/form-data" action="edit.php" method="post">
         <table>
             <tr>
-                <td><input class="input" type="hidden" name="id_kue" required="required"></td>
+                <td><input value="<?php echo $pel['id_kue'] ?>" class="input" type="hidden" name="id_kue" required="required"></td>
             </tr>
 
             <tr>
             <td><Label>Nama Kue</Label></td>
             </tr>
             <tr>
-                <td><input class="input" type="text" name="nama_kue" required="required"></td>
+                <td><input autocomplete="off" value="<?php echo $pel['nama_kue'] ?>" class="input" type="text" name="nama_kue" required="required"></td>
             </tr>
 
             <tr>
             <td><label>Harga Kue</label></td>
             </tr>
             <tr>
-                <td><input class="input" type="text, number" name="harga_kue" required="required"></td>
+                <td><input autocomplete="off" value="<?php echo $pel['harga_kue'] ?>" class="input" type="text, number" name="harga_kue" required="required"></td>
             </tr>
 
             <tr>
             <td><label>Detail Kue</label></td>
             </tr>
             <tr>
-                <td><input class="input" type="text" name="detail_kue" required="required"></td>
+                <td><input autocomplete="off" value="<?php echo $pel['detail_kue'] ?>" class="input" type="text" name="detail_kue" required="required"></td>
             </tr>
             
-            <tr>
-            <td><label>Foto Kue</label></td>
-            </tr>
-            <tr>
-                <td><input type="file" name="foto_kue" required="required"></td>
-            </tr>
+  
+
         </table>
-        <input type="submit" name="simpan" value="simpan" class="btn-simpan">
+        <input type="submit" name="editt" value="edit" class="btn-simpan">
         </form>
     </div>
 </body>

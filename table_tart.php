@@ -42,7 +42,7 @@
     <!-- CONTENT-TABLE -->
 
     <div class="content">
-        <h2>Regular Cake</h2>
+        <h2>Tart Cake</h2>
         <a href="tambahdatakue.html"><button class="btn">Tambah</button></a>
         <div class="table_konten">
             <table>
@@ -57,7 +57,7 @@
                     </tr>
                 </thead>
                 <?php
-                    $sql = "SELECT * from regular_cake";
+                    $sql = "SELECT * from tart";
                     $query = mysqli_query($koneksi, $sql);
 
                     while ($regular = mysqli_fetch_array($query)) {
@@ -70,8 +70,8 @@
                             <td>$regular[harga_kue]</td>
                             <td class='detail'>$regular[detail_kue]</td>
                             <td>
-                                <a href='formedit_reguler.php?id_kue=".$regular['id_kue']."'><button class='btn-edit'><i class='fa-solid fa-pen-to-square fa'></i></button></a>
-                                <a href='hapus_regular.php?id_kue=".$regular['id_kue']."' onClick=\"return confirm('Yakin akan menghapus data?');\"><button class='btn-hapus'><i class='fa-sharp fa-solid fa-trash'></button></i></a>
+                                <a href='formedit_tart.php?id_kue=".$regular['id_kue']."'><button class='btn-edit'><i class='fa-solid fa-pen-to-square fa'></i></button></a>
+                                <a href='hapus_tart.php?id_kue=".$regular['id_kue']."' onClick=\"return confirm('Yakin akan menghapus data?');\"><button class='btn-hapus'><i class='fa-sharp fa-solid fa-trash'></button></i></a>
                             </td>
                         <tr>
                     <tbody>";

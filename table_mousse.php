@@ -9,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- link css -->
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="stylemousse.css">
 
 <!-- link fontawesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -42,8 +42,8 @@
     <!-- CONTENT-TABLE -->
 
     <div class="content">
-        <h2>Regular Cake</h2>
-        <a href="tambahdatakue.html"><button class="btn">Tambah</button></a>
+        <h2>Mousse Cake</h2>
+        <a href="tambahmousse.html"><button class="btn">Tambah</button></a>
         <div class="table_konten">
             <table>
                 <thead>
@@ -57,7 +57,7 @@
                     </tr>
                 </thead>
                 <?php
-                    $sql = "SELECT * from regular_cake";
+                    $sql = "SELECT * from mousse_cake";
                     $query = mysqli_query($koneksi, $sql);
 
                     while ($regular = mysqli_fetch_array($query)) {
@@ -70,8 +70,8 @@
                             <td>$regular[harga_kue]</td>
                             <td class='detail'>$regular[detail_kue]</td>
                             <td>
-                                <a href='formedit_reguler.php?id_kue=".$regular['id_kue']."'><button class='btn-edit'><i class='fa-solid fa-pen-to-square fa'></i></button></a>
-                                <a href='hapus_regular.php?id_kue=".$regular['id_kue']."' onClick=\"return confirm('Yakin akan menghapus data?');\"><button class='btn-hapus'><i class='fa-sharp fa-solid fa-trash'></button></i></a>
+                                <a href='form_editrmousse.php?id_kue=".$regular['id_kue']."'><button class='btn-edit'><i class='fa-solid fa-pen-to-square fa'></i></button></a>
+                                <a href='hapus_mousse.php?id_kue=".$regular['id_kue']."' onClick=\"return confirm('Yakin akan menghapus data?');\"><button class='btn-hapus'><i class='fa-sharp fa-solid fa-trash'></button></i></a>
                             </td>
                         <tr>
                     <tbody>";

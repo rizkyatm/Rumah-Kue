@@ -109,6 +109,46 @@ body{
     border: none;
 }
 
+/* pembungkus table */
+.content{
+    box-sizing: border-box;
+    display: flex;
+    margin-top: 20px;
+    margin-left: 40px;
+    position: relative;
+    flex-direction: column;
+    background-color: #FFFFFF;
+    height: fit-content;
+    width: 74.5vw ;
+    border-radius: 30px;
+    padding: 20px 5px;
+    padding-left: 40px;
+    box-shadow: 0 0 5px rgba(0,0,0,10);
+}
+
+/* button tambah */
+.btn{
+    position: relative;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    width: 100px;
+    height: 40px;
+    border: solid 1px black;
+    background-color: white;
+    left: 774.5px;
+}
+
+.btn a{
+    text-decoration: none;
+    color: black;
+}
+
+.btn:hover{
+    background-color: green;
+    color: #FFFFFF;
+    border: none;
+}
+
 /* TABLE */
 
 .table_konten table{
