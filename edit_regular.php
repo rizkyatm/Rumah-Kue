@@ -11,7 +11,7 @@
         if($query){
             header('Location: table_regular.php');
         }else{
-            header('Location: edit.php?status=gagal');
+            header('Location: edit_regular.php?status=gagal');
         }
     }
- ?>
+?>
