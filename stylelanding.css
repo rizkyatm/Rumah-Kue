@@ -42,10 +42,11 @@ nav ul li a{
     color: white;
 }
 nav ul li a:hover{
-    color:rgb(0, 0, 0);
+    color: black;
     background-color:rgb(255, 255, 255);
     border-radius: 5px;
     padding: 10px;
+    text-decoration: none;
     
 }
 
@@ -196,4 +197,101 @@ footer .rumahkue p{
 
 .alamat ul li a span:hover{
     color: #ffff;
+}
+
+
+.image {
+    position: relative;
+    width: 400px;
+}
+
+.image__img {
+    display: block;
+    width: 100%;
+}
+
+.image__overlay {
+    position: absolute;
+    top: -20px;
+    left: -120px;
+    width: 350px;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: #ffffff;
+    font-family: 'Quicksand', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.25s;
+    margin: 20px;
+    border-radius: 20px;
+}
+
+.image__overlays {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 300px;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: #ffffff;
+    font-family: 'Quicksand', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.25s;
+    margin: 20px;
+    border-radius: 20px;
+}
+
+.image__overlay--blur {
+    backdrop-filter: blur(5px);
+}
+.image__overlays--blur {
+    backdrop-filter: blur(5px);
+}
+
+.image__overlay--primary {
+   backdrop-filter:blur(8px);
+}
+
+.image__overlays--primary {
+    backdrop-filter:blur(8px);
+ }
+
+.image__overlay > * {
+    transform: translateY(20px);
+    transition: transform 0.25s;
+}
+
+.image__overlays > * {
+    transform: translateY(20px);
+    transition: transform 0.25s;
+}
+
+.image__overlay:hover {
+    opacity: 1;
+}
+.image__overlays:hover {
+    opacity: 1;
+}
+.image__overlay:hover > * {
+    transform: translateY(0);
+}
+.image__overlays:hover > * {
+    transform: translateY(0);
+}
+
+.image__title {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.image__description {
+    font-size: 1.25em;
+    margin-top: 0.25em;
 }
