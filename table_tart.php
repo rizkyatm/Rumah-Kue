@@ -68,7 +68,7 @@
                     <tbody>
                         <tr>
                             <td>$tart[id_kue]</td>
-                            <td>$tart[nama_kue]</td>
+                            <td style='width: 200px;'>$tart[nama_kue]</td>
                             <td class='img'><img class='gambar' src='foto/$tart[2]'></td>
                             <td>$tart[harga_kue]</td>
                             <td class='detail'>$tart[detail_kue]</td>

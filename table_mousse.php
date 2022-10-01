@@ -46,7 +46,7 @@
             <p>Mousse Cake</p>
         </div>
     <div class="content">
-        <a href="tambahmousse.html"><button class="btn">Tambah</button></a>
+        <a style="width: fit-content;" href="tambahmousse.html"><button class="btn">Tambah</button></a>
         <div class="table_konten">
             <table>
                 <thead>
@@ -56,7 +56,7 @@
                         <th>Foto</th>
                         <th>Harga</th>
                         <th>Detail</th>
-                        <th>Action</th>
+                        <th >Action</th>
                     </tr>
                 </thead>
                 <?php
@@ -68,7 +68,7 @@
                     <tbody>
                         <tr>
                             <td>$mousse[id_kue]</td>
-                            <td>$mousse[nama_kue]</td>
+                            <td style='width: 200px;'>$mousse[nama_kue]</td>
                             <td class='img'><img class='gambar' src='foto/$mousse[2]'></td>
                             <td>$mousse[harga_kue]</td>
                             <td class='detail'>$mousse[detail_kue]</td>

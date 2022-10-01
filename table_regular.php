@@ -46,7 +46,7 @@
         <p>Regular Cake</p>
     </div>
     <div class="content">
-        <a href="tambahdatakue.html"><button class="btn">Tambah</button></a>
+        <a style="width: fit-content;" href="tambahdatakue.html"><button class="btn">Tambah</button></a>
         <div class="table_konten">
             <table>
                 <thead>
@@ -68,7 +68,7 @@
                     <tbody>
                         <tr>
                             <td>$regular[id_kue]</td>
-                            <td>$regular[nama_kue]</td>
+                            <td style='width: 200px;'>$regular[nama_kue]</td>
                             <td class='img'><img class='gambar' src='foto/$regular[2]'></td>
                             <td>$regular[harga_kue]</td>
                             <td class='detail'>$regular[detail_kue]</td>

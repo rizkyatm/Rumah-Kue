@@ -13,6 +13,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="stylelanding.css">
+    <!-- font poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Montserrat:wght@400;700&family=Poppins:wght@100;400;500;700&display=swap" rel="stylesheet">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <!-- fontawesome -->
@@ -54,100 +56,23 @@
 
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4" style="width: 1550px;position: relative;left: 37px;">
     <!-- php start -->
+    <?php while($card = mysqli_fetch_array($query)){ ?>
     <div class="col" style="width: 300px;">
     <a href="">
       <div class="image">
-         <img class="image__img" src="./img/pexels-cats-coming-1359321.jpg" alt="Bricks" style="border-radius: 20px; margin-bottom: 80px;width: 300px;">
+         <img class="image__img" src="foto/<?php echo $card[2] ?>" alt="Bricks" style="border-radius: 20px; margin-bottom: 80px;width: 300px;height: 300px;">
          <div class="image__overlays image__overlays--primary">
-             <div class="image__title">Bricks</div>
-                <p class="image__description">
-                  Here we have a brick wall.
+             <div style="text-align: center;margin: 0 auto; font-size: 30px;font-family: 'Poppins', sans-serif;font-weight: 500;" class="image__title"><?php echo $card['nama_kue']; ?></div>
+                <p style="font-family: 'Poppins', sans-serif;font-weight: 400;" class="image__description">
+                IDR <?php echo $card['harga_kue']; ?>
                 </p>
             </div>
         </div>
         </a>
     </div>
+    <?php } ?>
     <!-- php end -->
-    <!-- hapus start -->
-    <div class="col" style="width: 300px;">
-    <a href="">
-      <div class="image">
-         <img class="image__img" src="./img/pexels-cats-coming-1359321.jpg" alt="Bricks" style="border-radius: 20px; margin-bottom: 80px;width: 300px;">
-         <div class="image__overlays image__overlays--primary">
-             <div class="image__title">Bricks</div>
-                <p class="image__description">
-                  Here we have a brick wall.
-                </p>
-            </div>
-        </div>
-        </a>
-    </div>
-    <div class="col" style="width: 300px;">
-    <a href="">
-      <div class="image">
-         <img class="image__img" src="./img/pexels-cats-coming-1359321.jpg" alt="Bricks" style="border-radius: 20px; margin-bottom: 80px;width: 300px;">
-         <div class="image__overlays image__overlays--primary">
-             <div class="image__title">Bricks</div>
-                <p class="image__description">
-                  Here we have a brick wall.
-                </p>
-            </div>
-        </div>
-        </a>
-    </div>
-    <div class="col" style="width: 300px;">
-    <a href="">
-      <div class="image">
-         <img class="image__img" src="./img/pexels-cats-coming-1359321.jpg" alt="Bricks" style="border-radius: 20px; margin-bottom: 80px;width: 300px;">
-         <div class="image__overlays image__overlays--primary">
-             <div class="image__title">Bricks</div>
-                <p class="image__description">
-                  Here we have a brick wall.
-                </p>
-            </div>
-        </div>
-        </a>
-    </div>
-    <div class="col" style="width: 300px;">
-    <a href="">
-      <div class="image">
-         <img class="image__img" src="./img/pexels-cats-coming-1359321.jpg" alt="Bricks" style="border-radius: 20px; margin-bottom: 80px;width: 300px;">
-         <div class="image__overlays image__overlays--primary">
-             <div class="image__title">Bricks</div>
-                <p class="image__description">
-                  Here we have a brick wall.
-                </p>
-            </div>
-        </div>
-        </a>
-    </div>
-    <div class="col" style="width: 300px;">
-    <a href="">
-      <div class="image">
-         <img class="image__img" src="./img/pexels-cats-coming-1359321.jpg" alt="Bricks" style="border-radius: 20px; margin-bottom: 80px;width: 300px;">
-         <div class="image__overlays image__overlays--primary">
-             <div class="image__title">Bricks</div>
-                <p class="image__description">
-                  Here we have a brick wall.
-                </p>
-            </div>
-        </div>
-        </a>
-    </div>
-    <div class="col" style="width: 300px;">
-    <a href="">
-      <div class="image">
-         <img class="image__img" src="./img/pexels-cats-coming-1359321.jpg" alt="Bricks" style="border-radius: 20px; margin-bottom: 80px;width: 300px;">
-         <div class="image__overlays image__overlays--primary">
-             <div class="image__title">Bricks</div>
-                <p class="image__description">
-                  Here we have a brick wall.
-                </p>
-            </div>
-        </div>
-        </a>
-    </div>
-    <!-- hapus end -->
+    
     </div>
             
     <footer>
