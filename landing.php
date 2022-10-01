@@ -1,3 +1,9 @@
+<?php 
+include "koneksi.php";
+$sql = "SELECT * fROM promo";
+$query = mysqli_query($koneksi,$sql);
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -5,6 +11,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="stylelanding.css">
+    <!-- font poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Caveat+Brfamily=Montserrat:wght@400;700&family=Poppins:wght@100;400;500;700&display=swrel="stylesheet">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <!-- fontawesome -->
@@ -98,74 +106,35 @@
       <a href="L_TART.php"><img src="./img/pexels-vojtech-okenka-1055272.jpg" class="rounded" alt="..."style="width: 350px; margin-left: -100px;"></a>
     </div>
     <div class="text-right">
-      <a href="L_MOUSSE_CAKE.php"><img src="./img/pexels-cats-coming-1359328.jpg" class="rounded" alt="..." style="width: 350px;  margin-left: -100px;"></a>
+      <a href="L_MOUSSE_CAKE.php"><img src="./img/pexels-cats-coming-1359328.jpg" class="rounded" alt="..." style="width: 350px; height: 350px;  margin-left: -100px;"></a>
     </div>
   </div>
 
   <div style="display: flex; text-align: center; justify-content: space-evenly; margin: 60px auto;" >
     <div style="border: 1px none black; width: 40%;"><hr style="border:black solid;"></div>
-    <div><h2>PROMO</h2></div>
+    <div><h2>BEST SELLER</h2></div>
     <div style="border: 1px none black; width: 40%;"><hr style="border:black solid;"></div>
    </div>
 
 
    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3" style="width: 1550px; margin:0px auto 70px;padding-left:240px;"> 
     <!--php start -->
+    <?php while($card = mysqli_fetch_array($query)){ ?>
     <div class="col" style="width: 300px;">
-      <a href="">
+      <a href="detailpromo.php?id_kue=<?php echo $card['id_kue'] ?>">
       <div class="image">
-         <img class="image__img" src="./img/pexels-cats-coming-1359321.jpg" alt="Bricks" style="border-radius: 20px; margin-bottom: 40px; margin-left: -100px; width: 350px;">
+         <img class="image__img" src="foto/<?php echo $card[2] ?>" alt="Bricks" style="border-radius: 20px; margin-bottom: 40px; margin-left: -100px; width: 350px; height: 350px;">
          <div class="image__overlay image__overlay--primary">
-             <div class="image__title">Bricks</div>
-             <p class="image__description">
-                 Here we have a brick wall.
+             <div style="text-align: center;margin: 0 auto; font-size: 20px;font-family: 'Poppins', sans-serif;font-weight: 500px; width: 200px; margin-bottom: 10px; " class="image__title"><?php echo $card['nama_kue'] ?></div>
+             <p style="font-family: 'Poppins', sans-serif;font-weight: 400;" class="image__description">
+             <?php echo $card['harga_kue'] ?>
              </p>
          </div>
      </div>
     </a>
- </div>   
+ </div>
+ <?php } ?>
  <!--php end -->  
- <!-- hapus start -->
-    <div class="col" style="width: 300px;">
-      <a href="">
-      <div class="image">
-         <img class="image__img" src="./img/pexels-cats-coming-1359321.jpg" alt="Bricks" style="border-radius: 20px; margin-bottom: 40px; margin-left: -100px; width: 350px;">
-         <div class="image__overlay image__overlay--primary">
-             <div class="image__title">Bricks</div>
-             <p class="image__description">
-                 Here we have a brick wall.
-             </p>
-         </div>
-     </div>
-    </a>
- </div>     
-    <div class="col" style="width: 300px;">
-      <a href="">
-      <div class="image">
-         <img class="image__img" src="./img/pexels-cats-coming-1359321.jpg" alt="Bricks" style="border-radius: 20px; margin-bottom: 40px; margin-left: -100px; width: 350px;">
-         <div class="image__overlay image__overlay--primary">
-             <div class="image__title">Bricks</div>
-             <p class="image__description">
-                 Here we have a brick wall.
-             </p>
-         </div>
-     </div>
-    </a>
- </div>     
-    <div class="col" style="width: 300px;">
-      <a href="">
-      <div class="image">
-         <img class="image__img" src="./img/pexels-cats-coming-1359321.jpg" alt="Bricks" style="border-radius: 20px; margin-bottom: 40px; margin-left: -100px; width: 350px;">
-         <div class="image__overlay image__overlay--primary">
-             <div class="image__title">Bricks</div>
-             <p class="image__description">
-                 Here we have a brick wall.
-             </p>
-         </div>
-     </div>
-    </a>
- </div>     
- <!-- hapus end -->
 </div>
 
 

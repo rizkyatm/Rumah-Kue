@@ -58,7 +58,7 @@
     <!-- php start -->
     <?php while($card = mysqli_fetch_array($query)){ ?>
     <div class="col" style="width: 300px;">
-    <a href="">
+    <a href="detailtart.php?id_kue=<?php echo $card['id_kue'] ?>">
       <div class="image">
          <img class="image__img" src="foto/<?php echo $card[2] ?>" alt="Bricks" style="border-radius: 20px; margin-bottom: 80px;width: 300px;height: 300px;">
          <div class="image__overlays image__overlays--primary">

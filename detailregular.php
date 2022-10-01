@@ -1,5 +1,6 @@
 <?php 
-include "koneksi.php"
+include "koneksi.php";
+$id_kue = $_GET['id_kue'];
 ?>
 
 <!DOCTYPE html>
@@ -20,7 +21,7 @@ include "koneksi.php"
 </head>
 <body>
 <?php 
-    $sql = "SELECT * FROM cake order by id_kue DESC";
+    $sql = "SELECT * FROM regular_cake WHERE id_kue= '$id_kue'";
     $data = mysqli_query($koneksi, $sql);
     while($pel = mysqli_fetch_array($data)){
     ?>
@@ -30,15 +31,15 @@ include "koneksi.php"
             <div class="row g-0" style="display: flex; width: 100%; gap: 10px;">
                 <div class="col-md-4" style="width: 374px; height: 358px; position: absolute; left: 131px; top: 146px;">
                 <!-- img -->
-                <img style="border-radius: 30px;"  src="foto/<?php echo $pel['foto_kue'] ?>" class="img-fluid rounded-start" alt="...">
+                <img style="border-radius: 30px; width: 300px;height: 300px;"  src="foto/<?php echo $pel['foto_kue'] ?>" class="img-fluid rounded-start" alt="...">
                 </div>
                 <div class="col-md-8">
                 <div class="card-body" > 
                     <!-- card body/tulisan -->
-                    <h5 style="position: absolute;width: 508px;height: 69px;left: 577px;top: 158px;font-family: 'Poppins';font-style: normal;font-weight: 300;font-size: 46px;line-height: 69px;color: #000000;" class="card-title"><?php echo $post['nama_kue']; ?></h5>
-                    <p style="position: absolute;width: 214px;height: 59px;left: 577px;top: 244px;font-family: 'Poppins';font-style: normal;font-weight: 275;font-size: 39px;line-height: 58px;opacity: 0.5;" class="card-text">IDR 180.000</p>
+                    <h5 style="position: absolute;width: 508px;height: 69px;left: 577px;top: 158px;font-family: 'Poppins';font-style: normal;font-weight: 300;font-size: 46px;line-height: 69px;color: #000000; width: fit-content;" class="card-title"><?php echo $pel['nama_kue']; ?></h5>
+                    <p style="position: absolute;width: fit-content;height: 59px;left: 577px;top: 244px;font-family: 'Poppins';font-style: normal;font-weight: 275;font-size: 39px;line-height: 58px;opacity: 0.5;" class="card-text">IDR <?php echo $pel['harga_kue'] ?></p>
                     <hr style="position: absolute;width: 730px;height: 1px;left: 577px;top: 325px;">
-                    <p style="position: absolute;width: 730px;height: 60px;left: 577px;top: 353px;font-family: 'Poppins';font-style: normal;font-weight: 400;font-size: 20px;line-height: 30px;" class="card-text">A rich chocolate layer cake with cookies pastry cream filling, soft chocolate sponge, and choco crunchy at the bottom.</p>
+                    <p style="position: absolute;width: 730px;height: 60px;left: 577px;top: 353px;font-family: 'Poppins';font-style: normal;font-weight: 400;font-size: 20px;line-height: 30px;" class="card-text"><?php echo $pel['detail_kue'] ?></p>
                     <button style="position: absolute;width: 107px;height: 40px;left: 1150px;top: 489px;background: #D9D9D9;border-radius: 20px;background: #D9D9D9;border-radius: 20px;color: black;border: none;font-family: 'Poppins';font-style: normal;font-weight: 400;font-size: 20px;line-height: 30px;" class="btn btn-primary" type="button">Back</button>
                     
                 </div>
