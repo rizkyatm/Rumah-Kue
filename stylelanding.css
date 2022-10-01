@@ -295,3 +295,35 @@ footer .rumahkue p{
     font-size: 1.25em;
     margin-top: 0.25em;
 }
+
+ /* copy */
+ .detail_img{
+    position: relative;
+    bottom: 200px;
+    left: -10px;
+    font-size: 30px;
+    color: whitesmoke;
+    text-decoration: none;
+
+}
+
+.detail_img1{
+    position: relative;
+    bottom: 200px;
+    left: -45px;
+    font-size: 30px;
+    color: whitesmoke;
+    text-decoration: none;
+
+}
+
+.detail_img2{
+    position: relative;
+    bottom: 200px;
+    right: 150px;
+    font-size: 30px;
+    color: whitesmoke;
+    text-decoration: none;
+
+}
+/* copy selesai */

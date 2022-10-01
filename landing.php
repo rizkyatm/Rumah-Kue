@@ -40,9 +40,9 @@ $query = mysqli_query($koneksi,$sql);
             </nav>
         </div>
           <img src="./img/pexels-acharaporn-kamornboonyarush-1028714.jpg" class="d-block w-100" alt="..." style="height:100vh" >
-          <div class="carousel-caption d-none d-md-block"style="position: absolute; top: 600px;">
-            <h5 >First slide label</h5>
-            <p>Some representative placeholder content for the first slide.</p>
+          <div class="carousel-caption d-none d-md-block"style="position: absolute; top: 500px;">
+            <h5 >Kebahagiaan dimulai dari sini.</h5>
+            <p>Kue adalah kebahagiaan dalam bentuk yang nyata dan dapat dimakan.  </p>
           </div>
         </div>
          <div class="carousel-item ">
@@ -57,9 +57,9 @@ $query = mysqli_query($koneksi,$sql);
             </nav>
         </div>
           <img src="./img/pexels-ekaterina-bolovtsova-5702755.jpg" class="d-block w-100" alt="..." style="height:100vh" >
-          <div class="carousel-caption d-none d-md-block"style="position: absolute; top: 600px;">
-            <h5 >First slide label</h5>
-            <p>Some representative placeholder content for the first slide.</p>
+          <div class="carousel-caption d-none d-md-block"style="position: absolute; top: 500px;">
+            <h5 >Hidup ini singkat, tapi pasti manis.</h5>
+            <p>Jangan menunggu sampai terlambat. Makanlah sepotong kue itu!</p>
           </div>
         </div>
         <div class="carousel-item ">
@@ -74,9 +74,9 @@ $query = mysqli_query($koneksi,$sql);
             </nav>
         </div>
           <img src="./img/pexels-ruslan-khmelevsky-8732720.jpg" class="d-block w-100" alt="..." style="height:100vh" >
-          <div class="carousel-caption d-none d-md-block"style="position: absolute; top: 600px;">
-            <h5 >First slide label</h5>
-            <p>Some representative placeholder content for the first slide.</p>
+          <div class="carousel-caption d-none d-md-block"style="position: absolute; top: 500px;">
+            <h5 >Jalani hidup yang manis!</h5>
+            <p>Lihatlah dunia seperti kue ulang tahun raksasa. Ambil sepotong, tapi jangan terlalu banyak.</p>
           </div>
         </div>
       </div>
@@ -98,17 +98,32 @@ $query = mysqli_query($koneksi,$sql);
    </div>
    
    
-    <div style="display: flex; justify-content: space-evenly; position: relative; left: 50px;">
+   <div style="display: flex; justify-content: space-evenly; position: relative; left: 50px;">
     <div class="text-left">
-      <a href="L_REGULAR_CAKES.php"><img src="./img/pexels-cats-coming-1359321.jpg" class="rounded" alt="..." style="width: 350px;  margin-left: -100px;"></a>
+      <a href="L_REGULAR_CAKES.php" style="text-decoration: none;">
+        <div>
+        <img src="./img/cake r.jpg" class="rounded" alt="..." style="width: 350px;  margin-left: -100px; filter: blur(1px);">
+        <div class="detail_img" style="text-decoration:none;">Reguler Cake</div>
+      </div>
+      </a>
     </div>
     <div class="text-center">
-      <a href="L_TART.php"><img src="./img/pexels-vojtech-okenka-1055272.jpg" class="rounded" alt="..."style="width: 350px; margin-left: -100px;"></a>
+      <a href="L_MOUSSE_CAKE.php"  style="text-decoration: none;">
+        <div style="backdrop-filter: blur(5px);">
+        <img src="./img/pexels-cats-coming-1359328.jpg" class="rounded" alt="..." style="width: 350px;  margin-left: -100px; filter: blur(1px);">
+        <div class="detail_img1" style="text-decoration:none;">Mousse Cake</div>
+      </div>
+      </a>
     </div>
     <div class="text-right">
-      <a href="L_MOUSSE_CAKE.php"><img src="./img/pexels-cats-coming-1359328.jpg" class="rounded" alt="..." style="width: 350px; height: 350px;  margin-left: -100px;"></a>
+      <a href="L_TART.php"  style="text-decoration: none;">
+        <div style="backdrop-filter: blur(5px);">
+        <img src="./img/tart14.jpg" class="rounded" alt="..." style="width: 350px; height: 350px;  margin-left: -100px; filter: blur(1px);">
+        <div class="detail_img2" style="text-decoration:none;">Tart</div>
+      </div>
+      </a>
     </div>
-  </div>
+   </div>
 
   <div style="display: flex; text-align: center; justify-content: space-evenly; margin: 60px auto;" >
     <div style="border: 1px none black; width: 40%;"><hr style="border:black solid;"></div>
