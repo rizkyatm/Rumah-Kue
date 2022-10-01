@@ -30,7 +30,7 @@
             <nav class="navbar">
                 <h1>Rumah Kue</h1>
                 <ul style="position: relative;">
-                    <li><a href="landing.html">Home</a></li>
+                    <li><a href="landing.php">Home</a></li>
                     <li><a href="#">Gallery</a></li>
                     <li><a href="#">About</a></li>
                 </ul>
