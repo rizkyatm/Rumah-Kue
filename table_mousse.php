@@ -36,6 +36,7 @@
               <li><iconify-icon icon="ic:baseline-cake" style="color: white; margin-left: 40px;" width="20" height="20">h</iconify-icon><a href="table_regular.php">REGULAR CAKE</a></li>
               <li><iconify-icon icon="cib:cakephp" style="color: #ffff; margin-left: 40px;" width="20" height="20"></iconify-icon><a href="table_mousse.php">MOUSSE CAKE</a></li>
               <li><iconify-icon icon="wpf:wedding-cake" style="color: white; margin-left: 40px;" width="20" height="20"></iconify-icon><a href="table_tart.php">TART</a></li>
+              <li><iconify-icon icon="emojione-monotone:birthday-cake" style="color: white; margin-left: 40px;" width="20" height="20"></iconify-icon><a href="table_best.php">BEST SELLER</a></li>
           </ul>
       </div>
     </div>
@@ -46,17 +47,17 @@
             <p>Mousse Cake</p>
         </div>
     <div class="content">
-        <a href="tambahmousse.html"><button class="btn">Tambah</button></a>
+        <a style="width: fit-content;" href="tambahmousse.html"><button class="btn">Tambah</button></a>
         <div class="table_konten">
             <table>
                 <thead>
                     <tr>
-                        <th>ID</th>
+                        <th>ID Kue</th>
                         <th>Nama Kue</th>
-                        <th>Foto</th>
-                        <th>Harga</th>
-                        <th>Detail</th>
-                        <th>Action</th>
+                        <th>Foto Kue</th>
+                        <th>Harga Kue</th>
+                        <th>Detail Kue</th>
+                        <th >Action</th>
                     </tr>
                 </thead>
                 <?php
@@ -68,7 +69,7 @@
                     <tbody>
                         <tr>
                             <td>$mousse[id_kue]</td>
-                            <td>$mousse[nama_kue]</td>
+                            <td style='width: 200px;'>$mousse[nama_kue]</td>
                             <td class='img'><img class='gambar' src='foto/$mousse[2]'></td>
                             <td>$mousse[harga_kue]</td>
                             <td class='detail'>$mousse[detail_kue]</td>

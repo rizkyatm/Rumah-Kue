@@ -111,7 +111,6 @@ td .input{
 
 /* ini css side-bar */
 .sidebar{
-  padding: 0;
   width: 250px;
   height: 100vh;
   left: 0px;
@@ -119,6 +118,11 @@ td .input{
   background-color: #080C30;
   float: left;
   flex-direction: column;
+  position: sticky;
+}
+
+.sidebar h2 {
+  color: white;
 }
 
 .dashboard{
@@ -135,16 +139,22 @@ td .input{
   padding-right: 20px;
 }
 
-.dashboard h2{
-  font-size: 15px;
-  font-weight: bold;
-  color: white;
-  margin-left: 5%;
+.judul-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.judul p{
+  font-size: 30px;
+  font-weight: 500;
+  padding-top: 25px;
+  padding-left: 4%;
 }
 
 .list_menu ul li i{
   margin-left: 40px;
   color: #fff;
+
 
 }
 
@@ -162,3 +172,5 @@ ul li a{
   padding-left: 20px;
   transition: .5s;
 }
+
+
